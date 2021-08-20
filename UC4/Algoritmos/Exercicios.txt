@@ -1,0 +1,28 @@
+inteiro (numeros)
+real (numeros com casas decimais)
+caractere (texto)
+logico (verdadeiro ou falso)
+
+
+1) Faça um algoritmo que some o número 10 com o número 5 e exiba na tela o resultado.
+
+2) Faça um algoritmo que some 2 numeros e exiba na tela o resultado.
+
+3) Faça um algoritmo que some 2 números e com o resultado desta soma, divida ele por 2. Exiba o valor dessa divisão.
+
+4) Faça um algoritmo que solicite um numero ao usuario e verifique se este numero é par ou impar. Informe ao usuario o que ele é.
+
+5) Faça um algoritmo que solicite um numero ao usuario e verifique se este numero é par ou impar. Informe ao usuario o que ele é. Ao final, informe se o numero solicitado é maior que 50.
+
+6) Faça um algoritmo que solicite um numero ao usuario e verifique se este numero é par ou impar. Informe ao usuario o que ele é. Ao final, informe se o numero solicitado é maior ou menor do que 50.
+
+7) Crie um algoritmo que solicite 3 números ao usuario. Se 1 destes numeros for maior que 50, mostre a frase "Há numeros maiores que 50". Senão, mostre: "Não há nenhum numero maior que 50".
+
+8) Solicite a nota de um aluno. Essa nota vai de 0 a 100. Classifique a sua nota como a tabela a seguir e exiba a classificação (A,B,C,D,E) na tela.
+A = 100 - 80 
+B = 79 - 60 
+C = 59 - 40 
+D = 39 - 20 
+E = 19 - 0 
+
+9) Faça um algoritmo que dê 3 opções de ferramentas para o usuário escolher: Chave de fenda, philips e martelo. Dependendo da ferramenta escolhida, exiba o preço dela, sabendo que os preços respectivos são: R$ 10 ; R$ 15 ; R$ 35.

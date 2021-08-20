@@ -1,0 +1,11 @@
+String texto;
+int numero_inteiro;
+float numero_decimal;
+double numero_decimal;
+char caractere;
+boolean logico;
+date data;
+time hora;
+byte;
+decimal;
+currency monetário;

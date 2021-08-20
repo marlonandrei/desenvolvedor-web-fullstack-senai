@@ -1,0 +1,25 @@
+<script>
+
+    var binario = prompt("Informe o binario:");
+    var pos = 0;
+    var mat2 = [1,2,4,8,16,32,64,128];
+    var dec = 0;
+    var texto = "";
+
+    for (var cont=binario.length-1;cont>=0;cont--) {
+        
+        if (pos==7) {
+            texto =  String.fromCharCode(dec) + texto;
+
+            pos = 0;
+            dec = 0;
+        } else {
+            dec = dec+(mat2[pos]*binario.charAt(cont));
+            pos++;
+        }
+
+    }
+
+    alert(texto);
+
+</script>

@@ -1,0 +1,32 @@
+<html>
+<body>
+<script>
+
+var renda = prompt('Digite a renda do cliente');
+var faixa = 0;
+var percentual;
+
+/*
+    *** Comentário ***
+    Autor : Marlon
+    E  = && = and
+    OU = || = or
+ */
+
+if ((renda >= 1000) && (renda <= 2999.99)) {
+    faixa = 1;
+    percentual = 0.30;
+} else if ((renda >= 3000) && (renda <= 4999.99)) {
+    faixa = 2;
+    percentual = 0.35;
+}
+
+if (faixa == 0) {
+    alert('Fale com o gerente...');
+} else {
+    alert('O cliente esta na faixa ' + faixa + ' e pode comprar até R$ ' + renda * percentual);
+}
+
+</script>
+</body>
+</html>
