@@ -1,0 +1,18 @@
+1º Entrega
+1) Materiais e informações
+ - Envio de logo
+ - Envio de fotos dos produtos
+2) Base de Dados
+ - Instalação de Banco de Dados SQL Server
+ - Criação de banco de dados 
+3) Plataforma CMS
+ - Instalação da plataforma Wordpress
+ - Configuração de dados com empresa
+ - Configuração backend
+ - Treinamento backend
+
+2º Entrega
+4) Desenvolvimento do Layout
+ - Desenvolvimento do Wireframe 
+ - Aprovação do Wireframe 
+ - Programação do Layout (HTML)
