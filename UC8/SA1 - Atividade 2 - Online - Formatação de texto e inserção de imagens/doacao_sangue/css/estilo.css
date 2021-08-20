@@ -1,0 +1,24 @@
+body {
+    background-color:darkred;
+    color:white;
+}
+
+h1 {
+    text-align: left;
+}
+
+.imagem {
+    text-align: center;
+} 
+
+.negrito {
+    font-weight: bold;
+}
+
+.italico {
+    font-style: italic;
+}
+
+ul {
+    text-decoration: underline;
+}

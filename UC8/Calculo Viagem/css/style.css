@@ -1,0 +1,39 @@
+body {
+    /*
+    background-color: blue;
+    */
+}
+
+.cabecalho {
+    margin: 5px 0 0 0;
+    text-align: center;
+    padding: 15px 0 10px 0;
+}
+
+.corpo, .rodape {
+    margin: 5px 0 5px 0;
+    padding: 0;
+    text-align: center;
+}
+
+.coluna2 {
+    background-color: lightblue;
+    padding: 1% 10px 10px 20px;
+}
+
+h1 {
+    color: blue;
+}
+
+.endereco {
+    font-weight: bold;
+}
+
+p {
+    color: blue;
+}
+
+.imagem {
+    width: 100%;
+    height: 360px;
+}

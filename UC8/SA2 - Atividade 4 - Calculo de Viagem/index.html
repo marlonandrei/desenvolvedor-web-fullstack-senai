@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cálculo de Viagem</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="cabecalho row">
+        <div class="grid col-sm">
+          <h1>Cálculo de Viagem</h1>
+          <p>
+            Utilize esse sistema para calcular suas viagens de forma prática e
+            intuitiva.
+          </p>
+        </div>
+      </div>
+
+      <div class="corpo row">
+        <div class="grid col-sm">        
+          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="2000">
+                <img class="imagem d-block w-100" alt="" src="img/viagem1.jpg" />
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img class="imagem d-block w-100" alt="" src="img/viagem2.jpg" />
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img class="imagem d-block w-100" alt="" src="img/viagem3.jpg" />
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Próximo</span>
+            </button>
+          </div>
+
+        </div>
+        <div class="coluna2 grid col-sm">
+          <h2>Calculadora de Viagem</h2>
+          <p>
+            Aproveite a nossa calculadora e saiba exatamente o quanto irá gastar
+            em sua viagem. Preencha os dados abaixo e clique em calcular:
+          </p>
+          <label>Número de Passageiros</label>
+          <select id="quantidadepassageiros" class="form-select" aria-label="Número de Passageiros">
+            <option selected>Número de Passageiros</option>
+            <option value="1" selected>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+          </select>
+          <br>
+          <label>Valor da Viagem</label>
+          <div class="input-group mb-3">
+            <span class="input-group-text">R$</span>
+            <input id="valorviagem" type="text" class="form-control" aria-label="Valor da Viagem">
+            <span class="input-group-text">.00</span>
+          </div>
+          <button
+            id="botao"
+            type="button"
+            class="btn btn-primary btn-lg"
+            data-bs-toggle="modal"
+            data-bs-target="#janelaModal"
+          >
+            Calcular Viagem
+          </button>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="janelaModal"
+            tabindex="-1"
+            aria-labelledby="janelaModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="janelaModalLabel">
+                    Valor da Viagem
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body"><p id="total"></p></div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Fechar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+
+      <div class="rodape row">
+        <div class="grid col-sm">Desenvolvido por Marlon Andrei</div>
+      </div>
+    </div>
+
+    <script>
+      var botao = document.getElementById("botao");
+
+      botao.addEventListener("click", Calculo);
+
+      function Calculo() {
+        var quantidadepassageiros = document.getElementById("quantidadepassageiros").value;
+        var valorviagem = document.getElementById("valorviagem").value;
+        var resultado = quantidadepassageiros * valorviagem;
+
+        let speech = new SpeechSynthesisUtterance();
+        
+        var mensagem = "Valor da Viagem: R$ " + resultado + ",00";
+
+        speech.text = mensagem; 
+        document.getElementById("total").innerHTML = mensagem;
+        window.speechSynthesis.speak(speech);
+      }
+    </script>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+    <script src=""></script>
+  </body>
+</html>

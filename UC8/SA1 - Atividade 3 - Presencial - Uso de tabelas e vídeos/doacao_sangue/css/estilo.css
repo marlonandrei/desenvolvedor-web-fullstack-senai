@@ -1,0 +1,114 @@
+body {
+    background-color:darkred;
+    color:white;
+}
+
+div#interface {
+    width: 996px;
+    height: 616px;
+}
+
+table {
+    width: 996px;
+    height: 616px;
+	align: center;
+}
+
+td {
+    border: 1px solid white;
+}
+
+li {
+    margin-bottom: 40px;
+}
+
+.video {
+    width: 345px;
+    height: 200px;
+}
+
+.banner {
+    height: 102px;
+    padding: 0;
+    margin: 0;
+}
+
+.botoes {
+    width: 150px;
+    text-align: center;
+}
+
+.texto {
+    width: 150px;
+    padding: 8px;
+}
+
+nav#menu {
+    list-style: none;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    text-align: left;
+}
+
+.imagem {
+    text-align: center;
+} 
+
+.negrito {
+    font-weight: bold;
+}
+
+.italico {
+    font-style: italic;
+}
+
+ul {
+    text-decoration: underline;
+}
+
+.botao_grupo {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.button {
+    width: 100px;
+    text-align: center;
+    border-top: 1px solid #f7df97;
+    background: #b2d665;
+    background: -webkit-gradient(linear, left top, left bottom, from(#b5ab3c), to(#b2d665));
+    background: -webkit-linear-gradient(top, #b5ab3c, #b2d665);
+    background: -moz-linear-gradient(top, #b5ab3c, #b2d665);
+    background: -ms-linear-gradient(top, #b5ab3c, #b2d665);
+    background: -o-linear-gradient(top, #b5ab3c, #b2d665);
+    margin-bottom: 5px;
+    padding: 9.5px 19px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+    -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    box-shadow: rgba(0,0,0,1) 0 1px 0;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    color: white;
+    font-size: 14px;
+    font-family: Helvetica, Arial, Sans-Serif;
+    text-decoration: none;
+    vertical-align: middle;
+    }
+
+ .button:hover {
+    border-top-color: #527828;
+    background: #527828;
+    color: #ccc;
+    }
+
+ .button:active {
+    border-top-color: #1b435e;
+    background: #1b435e;
+    }

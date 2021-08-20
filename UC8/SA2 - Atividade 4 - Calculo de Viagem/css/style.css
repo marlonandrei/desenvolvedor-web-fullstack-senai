@@ -1,0 +1,37 @@
+body {
+    background-image: url("/img/back01.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+h1 {
+    font-family: 'Black Ops One', cursive;
+    color: blue;
+}
+
+p {
+    color: blue;
+}
+
+.imagem {
+    width: 100%;
+    height: 360px;
+}
+
+.cabecalho {
+    margin: 5px 0 0 0;
+    text-align: center;
+    padding: 15px 0 10px 0;
+}
+
+.coluna2 {
+    background-color: lightblue;
+    padding: 1% 10px 10px 20px;
+}
+
+.corpo, .rodape, .carousel {
+    margin: 5px 0 5px 0;
+    padding: 0;
+    text-align: center;
+}

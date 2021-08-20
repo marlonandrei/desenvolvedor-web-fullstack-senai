@@ -1,0 +1,15 @@
+﻿.fundo-nav {
+    background-color: #000000;
+}
+
+.imagem-carrossel {
+    height: 350px;
+    object-fit: cover;
+}
+
+footer {
+    background-color: chartreuse;
+    color: #000000;
+    text-align: center;
+    height: 80px;
+}
