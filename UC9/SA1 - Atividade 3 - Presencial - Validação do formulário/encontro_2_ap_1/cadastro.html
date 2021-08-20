@@ -1,0 +1,123 @@
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="_css/estilo.css">
+<script src="_javascript/valida_form.js"></script>
+<script src="_javascript/temporizador.js"></script>
+<script src="_javascript/valida_regex_json.js"></script>
+<link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css " rel = "stylesheet">
+<script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<!--Construção do efeito ACCORDION (ACORDEON) do JQUERY UI-->
+<script>
+  $(function() {
+    $( "#acordeon" ).accordion({
+        active: false, 
+        collapsible: true
+    });
+  });
+</script>
+</head>
+<body>
+
+<form name="form" id="form" onsubmit="return validar_tudo();">
+  <table>
+  <tr><th  colspan=2>
+    Cadastro de Assinantes - Canais de Esporte
+    <p id="tempo"></p>
+  </th></tr>
+  <tr><td><label for="nome">Nome:</label></td>
+    <td><input required type="text" name="nome" id="nome" ></td></tr>
+
+    <tr><td><label for="cpf">CPF:</label></td>
+    <td><input type="text" name="cpf" id="cpf" required></td></tr>
+    <tr><td><label for="email">Email:</label></td>
+    <td><input required type="email" name="email" id="email" ></td></tr>
+
+    <tr><td><label for="tel">Celular:</label></td>
+    <td><input required type="text" name="cel" id="cel"></td></tr>
+
+    <tr><td><label for="nascimento">Data Nascimento</label></td>
+    <td><input type="date" name="nascimento" id="nascimento" 
+      required ></td></tr>
+
+    <tr><td><label for="salario">Salário:</label></td>
+    <td><input required type="text" name="salario" id="salario" 
+     style="text-align: right;"></td></tr>
+
+    <tr><td><label for="sexo">Sexo:</label></td>
+      <td><input type="radio" name="sexo" id="sexo" value="M" checked>Masculino
+    <input type="radio" name="sexo" id="sexo" value="F">Feminino</td></tr>
+
+    <tr><td><label for="futebol">Time de Futebol:</label></td>
+      <td><select name="times">
+      <option value=""></option>
+      <option value="Corinthians">Corinthians</option>
+      <option value="Palmeiras">Palmeiras</option>
+      <option value="Santos">Santos</option>
+      <option value="São Paulo">São Paulo</option>
+    </select></td></tr>
+
+    <tr><td><label for="planos">Planos:</label></td>
+      <td><input type="radio" name="planos" 
+        id="planos" value="M" onclick="totaliza();">Mensal - R$ 85,00 <br>
+    <input type="radio" name="planos" 
+    id="planos" value="Q" onclick="totaliza();">Quadrimestral - R$ 300,00 <br>
+    <input type="radio" name="planos" 
+    id="planos" value="A" onclick="totaliza();">Anual - R$ 600,00</td></tr>
+  
+  <tr><td>Canais Incluídos</td>
+    <td><div id = "acordeon">
+    <h3>Plano Mensal</h3>
+    <div>
+       <ul>
+            <li>ESPN</li>
+            <li>Fox Sports</li>
+            <li>Sport TV</li>
+       </ul>
+    </div>
+    <h3>Plano Quadrimestral</h3>
+    <div>
+       <ul>
+            <li>ESPN</li>
+            <li>Fox Sports 2</li>
+            <li>Sport TV 2</li>
+       </ul>
+    </div>
+    <h3>Plano Anual</h3>
+    <div>
+       <ul>
+            <li>ESPN 2</li>
+            <li>Fox Sports 2</li>
+            <li>Sport TV 2 e 3</li>
+       </ul>
+    </div>
+ </div></td></tr>
+
+ <tr><td><label for="premiere">Premiere:</label></td>
+  <td><input type="radio" name="premiere" id="premiere" 
+    value="E" onclick="totaliza();">Econômico - 12 x R$ 60,00<br>
+  <input type="radio" name="premiere" id="premiere" 
+    value="C" onclick="totaliza();">Controle - Mensal R$ 80,00
+  </td></tr>
+
+  <tr><td><label for="total">Total (mensal):</label></td>
+    <td><input type="text" name="total" id="total" readonly
+      style="text-align: right;"></td></tr>
+
+  <tr><td><label for="login">Para assinar, <br> informe Login e Senha:</label></td>
+    <td><input required type="text" name="login" id="login" 
+       placeholder="Login (teste JSON: Usuario)" 
+      maxlength="15" minlength="5" size=22> <br>
+      <input required type="password" name="senha" id="senha" 
+       placeholder="Senha (teste JSON: Abc$123)" 
+      maxlength="8" minlength="6" size=22>
+    </td></tr>
+
+  <tr><th><button type="submit">Validar Formulário</button></th>
+    <th><input type="button" name="butassin" id="butassin" value="Assinar" 
+      disabled onclick="alert('Parabéns! Assinatura Realizada');"></th></tr>
+  </table>
+</form>
+</body>
+</html>

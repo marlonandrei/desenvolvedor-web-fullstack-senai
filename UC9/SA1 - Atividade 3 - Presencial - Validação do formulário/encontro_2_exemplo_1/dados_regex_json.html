@@ -1,0 +1,27 @@
+<html>
+<head>
+<script src="_javascript/valida_regex_json.js"></script>
+</head>
+<body>
+<div>
+  Aplicação de validação utilizando REGEX e JSON
+</div>
+<form name="form" id="form" onsubmit="return validar_tudo();">
+  <table>
+  <tr><td><label for="texto">Somente caracteres alfabéticos:</label></td>
+    <td><input type="text" name="texto" id="texto" required autocomplete="off"
+    maxlength="20" minlength="10"></td></tr>
+
+  <tr><td><label for="numero">Somente caracteres numéricos</label></td>
+    <td><input type="text" name="numero" id="numero" required autocomplete="off" 
+    maxlength="20" minlength="10"></td></tr>
+
+  <tr><td><label for="cpf">CPF (CPF válido para testes: <br> 123.456.788-90 ou 12345678890):</label></td>
+   <td><input type="text" name="cpf" id="cpf" required autocomplete="off"
+    maxlength="14" minlength="11"></td></tr>
+
+   <tr><th colspan=2><button type="submit">Confirmar</button></th></tr>
+</table>
+</form>
+</body>
+</html>

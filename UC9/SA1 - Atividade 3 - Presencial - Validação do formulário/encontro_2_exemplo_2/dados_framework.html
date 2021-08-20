@@ -1,0 +1,49 @@
+<html>
+<head>
+<meta charset="utf-8">
+<script src="_javascript/valida_framework.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"></script>
+<!--Construção de máscaras pelo JQUERY-->
+<script type="text/javascript">  
+  // a  Representa caracteres alfabéticos (letras) (A-Z,a-z)
+  // a  Porém 'a' não permite acentuação nem ç 
+  // 9  Representa caracteres numéricos (números) (0-9)
+  // *  Representa caracteres alfanuméricos (letras e números) (A-Z,a-z,0-9)
+  $(function() {
+  $('.mask-numeros').mask('9999999999'); //caracteres numéricos
+  $('.mask-cpf').mask('999.999.999-99'); //CPF
+  $('.mask-real').maskMoney({showSymbol:true,symbol:'R$ ', 
+  decimal:',', thousands:'.', allowZero:true}); // valores monetários
+  });
+</script>
+</head>
+<body>
+<div>
+  Aplicação de validação utilizando REGEX JQUERY JSON
+</div>
+<form name="form" id="form" onsubmit="return validar_tudo();">
+  <table>
+  <tr><td><label for="texto">Somente caracteres alfabéticos:</label></td>
+    <td><input type="text" name="texto" id="texto" required autocomplete="off"
+    maxlength="20" minlength="10"></td></tr>
+
+    <tr><td><label for="numero">Somente caracteres numéricos <br> (preencher os 10 caracteres)</label></td>
+    <td><input type="text" name="numero" id="numero" autocomplete="off"
+	class="mask-numeros"></td></tr>
+
+    <tr><td><label for="cpf">CPF (CPF válido para testes: <br> 123.456.788-90):</label></td>
+    <td><input type="text" name="cpf" id="cpf" autocomplete="off"
+    class="mask-cpf"></td></tr>
+
+    <tr><td><label for="imov">Valor Imóvel (exemplo):</label></td>
+    <td><input type="text" name="imov" id="imov" autocomplete="off"
+    class="mask-real" style="text-align: right;"></td></tr>
+
+    <tr><th colspan=2><button type="submit">Confirmar</button></th></tr>
+	
+  </table>
+</form>
+</body>
+</html>

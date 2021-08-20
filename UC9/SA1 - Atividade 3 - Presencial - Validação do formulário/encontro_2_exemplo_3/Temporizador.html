@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+</style>
+</head>
+<body>
+
+<h1>Temporizador</h1>
+<p id="data">
+<input type="text" id="datahoje" disabled >
+</p>
+<br>
+<p id="tempo"></p>
+
+<script>
+
+var d = new Date();
+document.getElementById("datahoje").value = d;
+
+
+
+setInterval(contartempo, 1000);
+
+
+var contador=1;
+function contartempo(){ 
+	document.getElementById("tempo").innerHTML = contador;
+	contador++;
+}
+    
+
+    
+</script>
+
+</body>
+</html>

@@ -1,0 +1,4 @@
+#acordeon{font-size: 14px; width:200px;}
+label, tr {font-size: 14px; font-family: arial;}
+button, input[type="button"] {font-size: 20px; font-family: arial;}
+table {background-color: lightgray;}
