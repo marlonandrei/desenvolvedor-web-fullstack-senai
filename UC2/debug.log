@@ -1,0 +1,25 @@
+[1006/145428.041:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1006/145428.042:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1006/150241.081:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1006/150241.082:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1006/150248.921:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1006/150248.922:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1006/150251.688:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1006/150251.689:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1006/150253.750:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1006/150253.750:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1007/200919.099:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1007/200919.121:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1014/174921.096:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1014/174921.150:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1014/175100.613:ERROR:crash_report_database_win.cc(498)] failed to stat report
+[1014/175100.613:ERROR:crash_report_database_win.cc(498)] failed to stat report
+[1014/175116.396:ERROR:crash_report_database_win.cc(498)] failed to stat report
+[1014/175116.396:ERROR:crash_report_database_win.cc(498)] failed to stat report
+[1014/180116.411:ERROR:crash_report_database_win.cc(498)] failed to stat report
+[1014/180116.412:ERROR:crash_report_database_win.cc(498)] failed to stat report
+[1014/180116.413:ERROR:filesystem_win.cc(116)] GetFileAttributes C:\Users\Marlon Andrei\AppData\Local\Google\Chrome\User Data\Crashpad\reports\ccd9323c-1898-40f4-bc24-8e5775aef991.dmp: O sistema não pode encontrar o arquivo especificado. (0x2)
+[1014/180116.413:ERROR:filesystem_win.cc(116)] GetFileAttributes C:\Users\Marlon Andrei\AppData\Local\Google\Chrome\User Data\Crashpad\reports\40f57358-a90d-4838-bf41-07108066d4f5.dmp: O sistema não pode encontrar o arquivo especificado. (0x2)
+[1014/180116.413:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1104/185725.229:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1104/224440.756:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
