@@ -17,8 +17,4 @@ A formação tem como foco habilitar os alunos a trabalharem com softwares livre
 
 Este repositório tem como objetivo, centralizar todos os exercícios desenvolvidos nas aulas de forma a servir como exemplo para estudantes do curso e outros desenvolvedores.
 
-## 🤝 Idelizador
-
-Marlon Andrei de Carvalho - Instrutor e Especialista em TI
-
 [⬆ Voltar ao topo]
