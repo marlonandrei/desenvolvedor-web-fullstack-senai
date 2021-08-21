@@ -3,8 +3,6 @@
 <meta charset="utf-8">
 <link rel="stylesheet" href="_css/estilo.css">
 <script src="_javascript/valida_form.js"></script>
-<script src="_javascript/temporizador.js"></script>
-<script src="_javascript/valida_regex_json.js"></script>
 <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css " rel = "stylesheet">
 <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
 <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
@@ -22,20 +20,20 @@
 
 <form name="form" id="form" onsubmit="return validar_tudo();">
   <table>
-  <tr><th  colspan=2>
+  <tr><th colspan=2>
     Cadastro de Assinantes - Canais de Esporte
-    <p id="tempo"></p>
+    <p id="temporizador">Tempo na página: 0 segundo(s)</p>
   </th></tr>
   <tr><td><label for="nome">Nome:</label></td>
     <td><input required type="text" name="nome" id="nome" ></td></tr>
 
     <tr><td><label for="cpf">CPF:</label></td>
-    <td><input type="text" name="cpf" id="cpf" required></td></tr>
+    <td><input type="text" name="cpf" id="cpf"  required></td></tr>
     <tr><td><label for="email">Email:</label></td>
     <td><input required type="email" name="email" id="email" ></td></tr>
 
     <tr><td><label for="tel">Celular:</label></td>
-    <td><input required type="text" name="cel" id="cel"></td></tr>
+    <td><input required type="text" name="cel" id="cel" ></td></tr>
 
     <tr><td><label for="nascimento">Data Nascimento</label></td>
     <td><input type="date" name="nascimento" id="nascimento" 
@@ -50,7 +48,7 @@
     <input type="radio" name="sexo" id="sexo" value="F">Feminino</td></tr>
 
     <tr><td><label for="futebol">Time de Futebol:</label></td>
-      <td><select name="times">
+      <td><select required name="times">
       <option value=""></option>
       <option value="Corinthians">Corinthians</option>
       <option value="Palmeiras">Palmeiras</option>
@@ -59,11 +57,11 @@
     </select></td></tr>
 
     <tr><td><label for="planos">Planos:</label></td>
-      <td><input type="radio" name="planos" 
+      <td><input checked type="radio" name="planos" 
         id="planos" value="M" onclick="totaliza();">Mensal - R$ 85,00 <br>
-    <input type="radio" name="planos" 
+    <input type="radio"  name="planos" 
     id="planos" value="Q" onclick="totaliza();">Quadrimestral - R$ 300,00 <br>
-    <input type="radio" name="planos" 
+    <input  type="radio" name="planos" 
     id="planos" value="A" onclick="totaliza();">Anual - R$ 600,00</td></tr>
   
   <tr><td>Canais Incluídos</td>
@@ -95,7 +93,7 @@
  </div></td></tr>
 
  <tr><td><label for="premiere">Premiere:</label></td>
-  <td><input type="radio" name="premiere" id="premiere" 
+  <td><input checked type="radio" name="premiere" id="premiere" 
     value="E" onclick="totaliza();">Econômico - 12 x R$ 60,00<br>
   <input type="radio" name="premiere" id="premiere" 
     value="C" onclick="totaliza();">Controle - Mensal R$ 80,00
@@ -119,5 +117,8 @@
       disabled onclick="alert('Parabéns! Assinatura Realizada');"></th></tr>
   </table>
 </form>
+
+  <script src="_javascript/temporizador.js"></script>
+  <script src="_javascript/valida_regex_json.js"></script>
 </body>
 </html>

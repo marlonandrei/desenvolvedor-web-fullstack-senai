@@ -1,4 +1,3 @@
-
 //Validação com REGEX
 function validar_cpf() {
   let value = document.getElementById("cpf").value;
@@ -27,43 +26,34 @@ function confere_cpf()
     }
 }
 
-function confere_usuario()
-{
-  let usuario_json = '{"usuario": "Usuario"}';
-  let v_usuario = JSON.parse(usuario_json);
-  if(v_usuario.usuario == document.form.login.value)
-    return true;
-  else
-    {
-    alert("Usuáro não confere com JSON!");
+function confere_login() {
+
+  let login_json = '{"usuario": "Usuario","senha":"Abc$123"}';
+  let v_login = JSON.parse(login_json);
+  
+  if (v_login.usuario != document.form.login.value) {
+    alert("LOGIN não confere com JSON!");
     document.form.login.focus();
     return false;
-    }
-}
+  }
 
-function confere_senha()
-{
-  let senha_json = '{"senha": "Abc$123"}';
-  let v_senha = JSON.parse(senha_json);
-  if(v_senha.senha == document.form.senha.value)
-    return true;
-  else
-    {
-    alert("Senha não confere com JSON!");
-    document.form.senha.focus();
+  if (v_login.senha != document.form.senha.value) {
+    alert("SENHA não confere com JSON!");
+    document.form.login.focus();
     return false;
-    }
+  }
+
+  return true;
 }
 
   //valida todos os campos
   function validar_tudo() {
-    let butassin = document.getElementById("butassin");
-    var validado = validar_cpf() && confere_cpf() && confere_usuario() && confere_senha();
+    var btn = document.getElementById('butassin');
     // se um deles for inválido, retorna false e o form não é submetido
-    
-    if (validado) 
-      butassin.disabled = false;
-    
+    var retorno = validar_cpf() && confere_cpf() && confere_login();
+    if (retorno)
+      btn.disabled = false;
+
     return false;
   }
   
