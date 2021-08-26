@@ -1,16 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Player de Vídeo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-</head>
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
 
-    
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col">
+          <video id="playervideo" width="500" height="300">
+            <source src="media/video.mp4" type="video/mp4" />
+            <!--Suportado em IE9, Chrome 6 e Safari 5 -->
+            O seu navegador não suporta a tag vídeo
+          </video>
+        </div>
+        <div class="col"></div>
+      </div>
+      <div class="row">
+        <div class="col colbotoes">
+
+            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                <button id="btnPlay" type="button" class="btn btn-outline-primary">Executar</button>
+                <button id="btnPause" type="button" class="btn btn-outline-primary">Pausar</button>
+                <button id="btnAmpliar" type="button" class="btn btn-outline-primary">Ampliar</button>
+                <button id="btnReduzir" type="button" class="btn btn-outline-primary">Reduzir</button>
+                <button id="btnTamanhoNormal" type="button" class="btn btn-outline-primary">Tamanho Normal</button>
+                <button id="btnTelaInteira" type="button" class="btn btn-outline-primary">Tela Inteira</button>
+                <button id="btnVolumeMais" type="button" class="btn btn-outline-primary">Volume Mais</button>
+                <button id="btnVolumeMenos" type="button" class="btn btn-outline-primary">Volume Menos</button>
+                <button id="btnMudo" type="button" class="btn btn-outline-primary">Mudo</button>
+            </div>
+
+        </div>
+      </div>
+    </div>
 
     <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>
