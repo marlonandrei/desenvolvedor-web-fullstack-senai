@@ -1,0 +1,14 @@
+.cotainer-fluid {
+    padding: 50px;
+    background-color: navy;
+}
+
+.formulario {
+    background-color: lightgray;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.btn {
+    margin-top: 20px;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="cotainer-fluid">
+        <div class="row">
+            <div class="col formulario">
+                <h1>Cadastro de cliente</h1>
+                <form action="" onsubmit="return Cadastrar();">
+                    
+                    <label class="form-label">Nome</label>
+                    <input class="form-control" required name="nome"
+                    id="nome" type="text" minlength="3"
+                    maxlength="60">
+
+                    <label class="form-label">CPF</label>
+                    <input class="form-control cpf_mask" required name="cpf"
+                    id="cpf" type="text"
+                    maxlength="14">
+                    
+                    <label class="form-label">Telefone</label>
+                    <input class="form-control telefone_mask" required name="telefone"
+                    id="telefone" type="text"
+                    maxlength="14">
+
+                    <label class="form-label">Celular</label>
+                    <input class="form-control celular_mask" required name="celular"
+                    id="celular" type="text"
+                    maxlength="14">
+
+                    <label class="form-label">CEP</label>
+                    <input class="form-control cep_mask" required name="cep"
+                    id="cep" type="text"
+                    maxlength="9" onblur="pesquisaCep(this.value);">
+
+                    <label class="form-label">Endereço</label>
+                    <input class="form-control" disabled name="endereco"
+                    id="endereco" type="text">
+                    
+                    <label class="form-label">Número</label>
+                    <input class="form-control" required name="numero"
+                    id="numero" type="text">
+                    
+                    <label class="form-label">Complemento</label>
+                    <input class="form-control" name="complemento"
+                    id="complemento" type="text">
+                                                      
+                    <label class="form-label">Bairro</label>
+                    <input class="form-control" disabled name="bairro"
+                    id="bairro" type="text">
+                                  
+                    <label class="form-label">Cidade</label>
+                    <input class="form-control" disabled name="cidade"
+                    id="cidade" type="text">
+                                
+                    <label class="form-label">Estado</label>
+                    <input class="form-control" disabled name="estado"
+                    id="estado" type="text">
+                                        
+                    <button type="submit" class="btn btn-primary btn-lg">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
