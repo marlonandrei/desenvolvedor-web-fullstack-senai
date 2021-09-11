@@ -13,6 +13,10 @@ body {
     box-shadow: 5px 5px 15px 5px #000000;
 }
 
+img {
+    width: 70px;
+}
+
 .btn {
     margin: 20px;
     min-width: 150px;
