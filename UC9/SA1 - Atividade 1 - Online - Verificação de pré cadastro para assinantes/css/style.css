@@ -1,15 +1,14 @@
-.titulo {
+.quadrante {
     text-align: center;
-    height: 200px;
-    padding-top: 100px;
+    background-color: lightgray;
+    padding: 50px;
+    min-width: 700px;
+    border: 1px solid black;
+    margin-top: 150px;
 }
 
-.botaosim {
-    text-align: right;
-    padding: 30px;
+.btn {
+    margin: 20px;
+    min-width: 150px;
 }
 
-.botaonao {
-    text-align: left;
-    padding: 30px;
-}
