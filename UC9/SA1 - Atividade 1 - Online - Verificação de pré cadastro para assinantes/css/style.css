@@ -1,3 +1,7 @@
+body {
+    background-color: rgb(255,0,0,0.9);
+}
+
 .quadrante {
     text-align: center;
     background-color: lightgray;
