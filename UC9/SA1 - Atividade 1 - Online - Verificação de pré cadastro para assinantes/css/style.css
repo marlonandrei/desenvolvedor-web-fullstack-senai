@@ -1,5 +1,8 @@
 body {
-    background-color: rgb(255,0,0,0.9);
+    background-image: url("../img/fundo.jpg");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
 }
 
 .quadrante {
