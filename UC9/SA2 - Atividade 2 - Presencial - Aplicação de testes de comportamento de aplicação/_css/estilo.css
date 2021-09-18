@@ -1,0 +1,19 @@
+table {
+		font-size: 16pt;
+		font-family: arial;
+		background-color: lightgray;
+		}
+input[type=text] 
+		{
+		text-align: center;
+		font-size:16pt;
+		font-family: arial;
+		}
+input[type=button], input[type=reset]
+		{
+		font-size:14pt;
+		font-family: arial;
+		}
+.c1 {
+	text-align: right;
+	}

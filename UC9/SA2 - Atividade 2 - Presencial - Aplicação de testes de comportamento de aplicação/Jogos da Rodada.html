@@ -1,0 +1,66 @@
+<html>
+<head>
+<link rel=stylesheet href="_css/estilo.css">
+
+<script src="_javascript/pontos.js"></script>
+</head>
+<body>
+<form>
+<center>
+<table>
+<caption>Jogos da Rodada</caption>
+<tr><th>Clube</th><th colspan=3>Placar</th><th>Clube</th><th width="200px" >Campeão</th></tr>
+<tr><td class="c1">Sertãozinho</td>
+<td><input type="text" id="t11" value="0" size=1 readonly></td>
+<td> X </td>
+<td><input type="text" id="t12" value="0" size=1 readonly></td>
+<td>Brotas</td>
+<td id="Jogo1" style="text-align: center"></td>
+</tr>
+
+<tr><td class="c1">Ipiranga</td>
+<td><input type="text" id="t21" value="0" size=1 readonly></td>
+<td> X </td>
+<td><input type="text" id="t22" value="0" size=1 readonly></td>
+<td>Nacional</td>
+<td id="Jogo2" style="text-align: center"></td>
+</tr>
+
+<tr><td class="c1">Mirassol</label></td>
+<td><input type="text" id="t31" value="0" size=1 readonly></td>
+<td> X </td>
+<td><input type="text" id="t32" value="0" size=1 readonly></td>
+<td>Operário</td>
+<td id="Jogo3" style="text-align: center"></td>
+</tr>
+
+<tr><th colspan=5>Total de pontos</td></tr>
+<tr><td colspan=2 class="c1">Brotas</td>
+<td colspan=3><input type=text id="tot_bro" size=1 readonly></td></tr>
+<tr><td colspan=2 class="c1">Ipiranga</td>
+<td colspan=3><input type=text id="tot_ipi" size=1 readonly></td></tr>
+<tr><td colspan=2 class="c1">Mirassol</td>
+<td colspan=3><input type=text id="tot_mir" size=1 readonly></td></tr>
+<tr><td colspan=2 class="c1">Nacional</td>
+<td colspan=3><input type=text id="tot_nac" size=1 readonly></td></tr>
+<tr><td colspan=2 class="c1">Operário</td>
+<td colspan=3><input type=text id="tot_ope" size=1 readonly></td></tr>
+<tr><td colspan=2 class="c1">Sertãozinho</td>
+<td colspan=3><input type=text id="tot_ser" size=1 readonly></td></tr>
+</table>
+<br>
+
+<table>
+<caption>Gerar Placar Automático</caption>
+<tr></tr>
+<td>
+<input type=button id="pj" value="Pós Jogo" onclick="posjogo()">
+<input type=button id="pt" value="Pontuação" onclick="inserir_pontos()" disabled>
+<input type=reset id="nr" value="Nova Rodada" 
+onclick="document.getElementById('pj').disabled=false;limpar_campeoes()">
+</td>
+</table>
+</center>
+</form>
+</body>
+</html>
