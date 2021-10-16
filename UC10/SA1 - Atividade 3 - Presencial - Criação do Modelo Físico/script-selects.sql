@@ -1,97 +1,150 @@
 use copa_mundo;
 
-/* Nome de todos os jogadores titulares, por seleção; */
-select selecao, nome from Jogador
-left join Pais on Pais.idPais = Jogador.Pais_idPais;
 
-/* Seleção, o nome do jogador e número de vezes que ele foi substituído; */
-select 
-	selecao, 
-    nome, 
-    count(substituicao.Jogador_idJogador_sai) as substituicoes
-from Jogador
-left join Pais on Pais.idPais = Jogador.Pais_idPais
-left join substituicao on substituicao.Jogador_idJogador_sai = Jogador.idJogador
-group by selecao, nome;
+select
+selecao,nome
+from jogador
+left join pais on pais.idpais = jogador.pais_idpais
+where situacao = 'T'
+order by selecao, nome;
 
-/* Número total de cartões amarelos e vermelhos por seleção; */
+
+select
+	selecao,
+    nome,
+    count(Jogador_idJogador_sai) as substituicoes
+from jogador
+left join pais on pais.idpais = jogador.pais_idpais
+right join substituicao on substituicao.Jogador_idJogador_sai = jogador.idJogador
+group by
+	selecao,
+    nome
+order by 
+	selecao,
+    nome;
+
+
 select 
-	selecao, 
-    count(Cartao.amarelo) as amarelo,
-    count(Cartao.vermelho) as vermelho
-from Jogador
-left join Pais on Pais.idPais = Jogador.Pais_idPais
-left join Cartao on Cartao.Jogador_idJogador = Jogador.idJogador
-group by 
+	selecao,
+    sum(amarelo) as amarelo,
+    sum(vermelho) as vermelho
+from cartao
+left join jogador on jogador.idjogador = cartao.Jogador_idjogador
+left join pais on pais.idpais = jogador.pais_idpais
+group by
+	selecao
+order by 
 	selecao;
 
-/* 
-	Tabela de pontuação ordenada por grupo de forma decrescente por pontuação (vitória 3 pontos, empate 1 ponto), utilizando como critérios de desempate, o saldo de gols. A tabela deve exibir grupo, seleção, pontuação, número de vitórias, número de empates, número de derrotas e saldo de gols (gols pró - gols contra).  
-	Observação: classificam para a segunda fase somente as duas primeiras seleções de cada grupo.
-*/ 
-select 
-	Grupo_idGrupo,
-    selecao,
-    sum(pontos) as pontos,
-    sum(vitorias) as vitorias,
-    sum(empates) as empates,
-    sum(derrotas) as derrotas,
-    sum(saldo_gols) as saldo_gols
-from     
-(
-	select
-		Pais.Grupo_idGrupo,
-		Pais.selecao,
-		case 
-			when gols_idpais_1 > gols_idpais_2 then 3
-			when gols_idpais_2 = gols_idpais_1 then 1
-			else 0
-		end as pontos,
-		case 
-			when gols_idpais_1 > gols_idpais_2 then 1
-			else 0
-		end as vitorias,
-		case 
-			when gols_idpais_1 = gols_idpais_2 then 1
-			else 0
-		end as empates,
-		case 
-			when gols_idpais_1 < gols_idpais_2 then 1
-			else 0
-		end as derrotas,
-		gols_idpais_1 - gols_idpais_2 as saldo_gols 
-	from Jogos
-	left join Pais on Pais.idPais = Jogos.Pais_idPais_1
+select * from pais;
 
-	union
 
-	select
-		Pais.Grupo_idGrupo,
-		Pais.selecao,
-		case 
-			when gols_idpais_2 > gols_idpais_1 then 3
-			when gols_idpais_2 = gols_idpais_1 then 1
-			else 0
-		end as pontos,
-		case 
-			when gols_idpais_2 > gols_idpais_1 then 1
-			else 0
-		end as vitorias,
-		case 
-			when gols_idpais_1 = gols_idpais_2 then 1
-			else 0
-		end as empates,
-		case 
-			when gols_idpais_2 < gols_idpais_1 then 1
-			else 0
-		end as derrotas,
-		gols_idpais_2 - gols_idpais_1 as saldo_gols 
-	from Jogos
-	left join Pais on Pais.idPais = Jogos.Pais_idPais_2
-) VW
-group by
-	Grupo_idGrupo,
-    selecao
+
+select  
+  grupo_idgrupo as grupo,
+  selecao,
+  pontos,
+  vitorias,
+  empates,
+  derrotas,
+  golspro-golscontra as saldo_gols
+from pais
 order by 
-	Grupo_idGrupo,
-    selecao;
+grupo_idgrupo,
+pontos
+desc;
+
+/* ******************************************* */
+select 
+  *
+from 
+(
+	select  
+	  grupo_idgrupo as grupo,
+	  selecao,
+	  pontos,
+	  vitorias,
+	  empates,
+	  derrotas,
+	  golspro-golscontra as saldo_gols
+	from pais
+	where grupo_idgrupo ='A'
+	order by 
+	grupo_idgrupo,
+	pontos
+    desc
+	limit 2
+) VW
+
+union
+
+select 
+  *
+from 
+(
+	select  
+	  grupo_idgrupo as grupo,
+	  selecao,
+	  pontos,
+	  vitorias,
+	  empates,
+	  derrotas,
+	  golspro-golscontra as saldo_gols
+	from pais
+	where grupo_idgrupo ='B'
+	order by 
+	grupo_idgrupo,
+	pontos
+    desc
+	limit 2
+) VW
+
+union
+
+select 
+  *
+from 
+(
+	select  
+	  grupo_idgrupo as grupo,
+	  selecao,
+	  pontos,
+	  vitorias,
+	  empates,
+	  derrotas,
+	  golspro-golscontra as saldo_gols
+	from pais
+	where grupo_idgrupo ='C'
+	order by 
+	grupo_idgrupo,
+	pontos
+    desc
+	limit 2
+) VW
+
+union
+
+select 
+  *
+from 
+(
+	select  
+	  grupo_idgrupo as grupo,
+	  selecao,
+	  pontos,
+	  vitorias,
+	  empates,
+	  derrotas,
+	  golspro-golscontra as saldo_gols
+	from pais
+	where grupo_idgrupo ='D'
+	order by 
+	grupo_idgrupo,
+	pontos
+    desc
+	limit 2
+) VW;
+
+
+
+
