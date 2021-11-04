@@ -1,0 +1,10 @@
+{
+    "dev.pageMargin.color": "rgba(0, 0, 0, 0.2)",
+    "dev.enable_disabled_in_property_page": false,
+    "view.undoLevel": 10,
+    "view.startupscreen.gridview.enabled": true,
+    "dev.stencil.path": "none",
+    "dev.stencil.dir": "none",
+    "dev.enabled": false,
+    "document.open.recentlyDirPath": "DefaultDirectoryForPencilProjectPortable"
+}

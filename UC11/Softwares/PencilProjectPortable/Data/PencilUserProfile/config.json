@@ -1,0 +1,18 @@
+{
+    "dev.pageMargin.color": "rgba(0, 0, 0, 0.2)",
+    "dev.enable_disabled_in_property_page": false,
+    "view.undoLevel": 10,
+    "view.startupscreen.gridview.enabled": true,
+    "dev.stencil.path": "none",
+    "dev.stencil.dir": "none",
+    "dev.enabled": false,
+    "document.open.recentlyDirPath": "D:\\",
+    "painterPropertyMap": "fillColor,foreColor,textColor,strokeColor,borderColor,strokeStyle,textAlign,textFont,shadowStyle,shadowColor,withBlur,withShadow,textPadding,startFillColor,endFillColor",
+    "object.snapping.enabled": true,
+    "grid.enabled": false,
+    "ui.collapsable_pane.left_pane.active_id": "collectionPane",
+    "Collection.lastUsedCollection.id": "Evolus.AndroidICSHIFI",
+    "edit.gridSize": 5,
+    "document.fileHandler.defaultHandlerType": ".epgz",
+    "dev.enable_disabled_in_menu": false
+}
