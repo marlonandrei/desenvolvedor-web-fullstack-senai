@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="SA1 Atividade 2 Presencial" version="4">
+  <OBJECT>
+    <ID name="SA1 Atividade 2 Presencial" mc="Standard.Project" uid="bbad6478-4ade-4ccf-aec3-8160cfb3d6bd"/>
+    <ATTRIBUTES>
+      <ATT name="ProjectContext"></ATT>
+      <ATT name="ProjectDescr"></ATT>
+      <ATT name="Name"><![CDATA[SA1 Atividade 2 Presencial]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="Model">
+        <COMPID name="sa1 atividade 2 presencial" mc="Standard.Package" uid="e8ab0513-1eb5-499d-9359-998bb251f261"/>
+      </COMP>
+      <COMP relation="DiagramRoot">
+        <COMPID name="SA1 Atividade 2 Presencial" mc="Infrastructure.DiagramSet" uid="8d9099f2-8350-4153-acc6-4c91bc6b62da"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

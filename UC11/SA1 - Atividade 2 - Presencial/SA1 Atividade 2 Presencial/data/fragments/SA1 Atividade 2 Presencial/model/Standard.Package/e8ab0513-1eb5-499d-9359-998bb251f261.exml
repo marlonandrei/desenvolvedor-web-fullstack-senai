@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="sa1 atividade 2 presencial" version="4">
+  <OBJECT>
+    <ID name="sa1 atividade 2 presencial" mc="Standard.Package" uid="e8ab0513-1eb5-499d-9359-998bb251f261"/>
+    <PID name="SA1 Atividade 2 Presencial" mc="Standard.Project" uid="bbad6478-4ade-4ccf-aec3-8160cfb3d6bd"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[sa1 atividade 2 presencial]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Banco" mc="Standard.Actor" uid="f18af613-440e-4b48-be2c-92f7ea0350cf"/>
+        <COMPID name="Empresa" mc="Standard.Actor" uid="2cd6062d-55da-41aa-a918-9502c3e0c3ec"/>
+        <COMPID name="Comprar Seguro" mc="Standard.UseCase" uid="67a0e730-f10b-4ff6-9725-0bfb466646c9"/>
+        <COMPID name="Vender Seguros" mc="Standard.UseCase" uid="3c07b49e-8edc-4d97-8930-dff2efc58c56"/>
+        <COMPID name="Enviar Seguradas" mc="Standard.UseCase" uid="17e2e20b-0c16-498c-b6dc-56991126eb27"/>
+        <COMPID name="Faturar apólices" mc="Standard.UseCase" uid="bc03b2b8-c44f-4744-9c20-1f8099c24a34"/>
+        <COMPID name="Efetivar Apólice da Segurada" mc="Standard.UseCase" uid="4a1c6a16-53cc-4a38-aea4-cae950eb2d5e"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="BancoInvest" mc="Standard.UseCaseDiagram" uid="cfd8c834-c872-4f16-b8e2-f41d5e421e7a"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
